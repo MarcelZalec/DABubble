@@ -42,5 +42,5 @@ jobs:
         port: 21
         protocol: ftps
         local-dir: ./dist/dabubble/browser/
-        server-dir: dabubble.marcelzalec.at/
+        server-dir: /dabubble.marcelzalec.at/
         concurrent-uploads: 2
