@@ -186,13 +186,13 @@ export class MessageboxComponent implements OnInit, OnDestroy {
    */
   checkKeyStatus(event: KeyboardEvent, chat: string): void {
     this.handleSendMessageOnKeyPress(event, chat)
-    if (event.getModifierState('AltGraph') && event.key == "q" || event.key == "@") // event.getModifierState('AltGraph') && event.key == "q"
+    if (event.getModifierState('AltGraph') && event.key == "q" || event.keyCode == 77) // event.getModifierState('AltGraph') && event.key == "q"
       this.mentionService.status = true;
       this.mentionService.isOpendWithKeys = true
     if (event.key == "Backspace") 
       this.mentionService.status = false;
       this.mentionService.channelSelection = false;
-    if (event.key == "#") {
+    if (event.key == "#" || event.keyCode == 18) {
       if (chat === 'createmessage') {
         this.sharedService.jumpToAtAbove('#')
       }
